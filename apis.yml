@@ -1,8 +1,25 @@
 aid: blind
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blind.png
 name: Blind
-description: 'Blind is a company surfaced as a portfolio company of dcm-ventures and added to the API
-  Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Blind (teamblind.com) is an anonymous professional community platform where verified
+  employees discuss compensation, interview experiences, layoffs, company culture, and career decisions
+  while preserving their anonymity through work-email verification. The platform organizes conversation
+  into company channels, industry topics, and location-based feeds, and runs on a freemium model with a
+  For Business offering. It operates primarily as a consumer mobile and web app; no public developer API,
+  developer portal, or well-known discovery surface was found during enrichment (all /.well-known/* probes
+  returned 404). Sector: consumer / professional social network. Surfaced as a portfolio company of
+  dcm-ventures.'
 url: https://raw.githubusercontent.com/api-evangelist/blind/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +29,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
+- Social Network
+- Professional Network
+- Community
+- Anonymous
+- Careers
+- Workplace
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +46,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/blind-domain-security.yml
 - type: Website
   url: https://www.teamblind.com/
+- type: Support
+  url: https://help.teamblind.com/
+- type: TermsOfService
+  url: https://us.teamblind.com/setting/term
+- type: PrivacyPolicy
+  url: https://us.teamblind.com/setting/privacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
